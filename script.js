@@ -25,7 +25,7 @@ function FormSubmit() {
 
     if(result !== false) {
         result = JSON.parse(result);
-        link.innerText = result.link;
+        link.innerHTML = "<a href='/redirect.php?key=" + result.key + "' target='_blank'>" + result.link + "</a>";
     }
     else {
         link.innerText = "При выполнении запроса произошла ошибка";
