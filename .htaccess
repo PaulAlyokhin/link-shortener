@@ -2,4 +2,6 @@ DirectoryIndex index.php
 Options -Indexes
 php_flag register_globals off
 RewriteEngine on
-RewriteRule ^-(.*) /redirect.php?key=$1 [L]
+# Ниже строка чпу благодаря ней урл будет выглядеть примерно так http://test-s.lok/-v465h
+# RewriteRule ^-(.*) /redirect.php?key=$1 [L]
+RewriteRule ^([a-z0-9]+)$ /redirect.php?key=$1

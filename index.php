@@ -2,7 +2,7 @@
 require_once('mysql.php');
 
 function GenerateKey($length = 5) {
-    $symbols = "QWERTYUIOPASDFGHJKLZXCVBNMabcdefghijklmnopqrstuvwxyz";
+    $symbols = "abcdefghijklmnopqrstuvwxyz0123456789";
 
     if($length <= 0) $length = 5;
     else if($length > strlen($symbols)) $length = strlen($symbols);

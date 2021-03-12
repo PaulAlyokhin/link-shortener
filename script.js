@@ -1,6 +1,5 @@
-var form = document.getElementById('form');
-var url = document.getElementById('url');
-var link = document.getElementById('link');
+let url = document.getElementById('url');
+let link = document.getElementById('link');
 
 /**
  * @return {boolean}
@@ -25,7 +24,7 @@ function FormSubmit() {
 
     if(result !== false) {
         result = JSON.parse(result);
-        link.innerHTML = "<a href='/redirect.php?key=" + result.key + "' target='_blank'>" + result.link + "</a>";
+        link.innerHTML = "<a href='" + result.link + "' target='_blank'>" + result.link + "</a>";
     }
     else {
         link.innerText = "При выполнении запроса произошла ошибка";
